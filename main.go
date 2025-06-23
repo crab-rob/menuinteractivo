@@ -14,7 +14,7 @@ import (
 )
 
 //go:embed db.json
-var database string
+var database []byte
 
 // Estructura para cada comando
 type CommandInfo struct {
@@ -27,7 +27,7 @@ var commandsDB []CommandInfo
 
 func loadCommandsDB() error {
 
-	return json.Unmarshal([]byte(database), &commandsDB)
+	return json.Unmarshal(database, &commandsDB)
 }
 
 func findCommandInfo(cmd string) *CommandInfo {
@@ -75,7 +75,7 @@ func main() {
 		cmd := exec.Command(parts[0], parts[1:]...)
 		output, err := cmd.CombinedOutput()
 		if err != nil {
-			output = []byte(fmt.Sprintf("Error: %v", err))
+			output = fmt.Appendf(nil, "Error: %v", err)
 		}
 
 		// Actualizar panel izquierdo
@@ -127,7 +127,7 @@ func renderPanels(left, right []string) {
 	maxLines := max(len(leftLines), len(rightLines))
 
 	// Combinar paneles línea por línea
-	for i := 0; i < maxLines; i++ {
+	for i := range maxLines {
 		leftLine := safeGetLine(leftLines, i, leftPanelWidth)
 		rightLine := safeGetLine(rightLines, i, rightPanelWidth)
 		fmt.Printf("%s | %s\n", leftLine, rightLine)
@@ -151,7 +151,7 @@ func max(a, b int) int {
 // wrapLines corta el texto en líneas y ajusta la altura
 func wrapLines(text string, width, height int) []string {
 	lines := []string{}
-	for _, line := range strings.Split(text, "\n") {
+	for line := range strings.SplitSeq(text, "\n") {
 		for len(line) > width {
 			lines = append(lines, line[:width])
 			line = line[width:]
