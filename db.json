@@ -1,0 +1,442 @@
+[
+    {
+        "comando": "apt",
+        "descripcion": "Gestor de paquetes para sistemas basados en Debian. Instala, actualiza y elimina paquetes.",
+        "info": "Permite instalar, actualizar y eliminar paquetes. Ejemplos: apt install paquete, apt update, apt upgrade, apt remove paquete. Flags: -y (asume sí a todas las preguntas), -q (modo silencioso)."
+    },
+    {
+        "comando": "awk",
+        "descripcion": "Lenguaje de procesamiento de texto y filtrado de archivos. Útil para extraer y transformar datos.",
+        "info": "Procesa y filtra texto por patrones. Ejemplo: awk '{print $1}' archivo.txt. Flags: -F (define separador de campo), -f (usa archivo de script)."
+    },
+    {
+        "comando": "blkid",
+        "descripcion": "Muestra información sobre dispositivos de bloques y sus UUID.",
+        "info": "Identifica dispositivos de bloques y muestra UUID, tipo de sistema de archivos, etc. Ejemplo: blkid /dev/sda1."
+    },
+    {
+        "comando": "cat",
+        "descripcion": "Concatena y muestra el contenido de archivos.",
+        "info": "Muestra el contenido de uno o varios archivos. Ejemplo: cat archivo.txt. Flags: -n (numera líneas), -A (muestra caracteres no imprimibles)."
+    },
+    {
+        "comando": "cd",
+        "descripcion": "Cambia el directorio de trabajo actual.",
+        "info": "Navega entre directorios. Ejemplo: cd /home/usuario, cd .. (sube un nivel)."
+    },
+    {
+        "comando": "chage",
+        "descripcion": "Gestiona la caducidad de contraseñas de usuarios.",
+        "info": "Permite ver o cambiar la expiración de contraseñas. Ejemplo: chage -l usuario. Flags: -E (fecha de expiración), -M (máximo de días)."
+    },
+    {
+        "comando": "chfn",
+        "descripcion": "Cambia la información personal de un usuario.",
+        "info": "Modifica información como nombre completo, teléfono, etc. Ejemplo: chfn usuario."
+    },
+    {
+        "comando": "chgrp",
+        "descripcion": "Cambia el grupo propietario de archivos o directorios.",
+        "info": "Cambia el grupo de uno o varios archivos. Ejemplo: chgrp grupo archivo. Flags: -R (recursivo)."
+    },
+    {
+        "comando": "chmod",
+        "descripcion": "Cambia los permisos de archivos o directorios.",
+        "info": "Modifica permisos de lectura, escritura y ejecución. Ejemplo: chmod +x script.sh, chmod 755 archivo. Flags: -R (recursivo)."
+    },
+    {
+        "comando": "chown",
+        "descripcion": "Cambia el propietario y/o grupo de archivos o directorios.",
+        "info": "Cambia usuario y grupo propietario. Ejemplo: chown usuario:grupo archivo. Flags: -R (recursivo)."
+    },
+    {
+        "comando": "chroot",
+        "descripcion": "Cambia el directorio raíz aparente para la ejecución de un comando.",
+        "info": "Ejecuta un comando con un nuevo directorio raíz. Ejemplo: chroot /nuevo/raiz /bin/bash."
+    },
+    {
+        "comando": "chsh",
+        "descripcion": "Cambia el intérprete de comandos (shell) de un usuario.",
+        "info": "Permite cambiar el shell predeterminado. Ejemplo: chsh -s /bin/zsh usuario."
+    },
+    {
+        "comando": "comm",
+        "descripcion": "Compara dos archivos línea por línea y muestra diferencias y coincidencias.",
+        "info": "Muestra líneas únicas y comunes entre dos archivos ordenados. Ejemplo: comm archivo1 archivo2. Flags: -1, -2, -3 (oculta columnas)."
+    },
+    {
+        "comando": "cp",
+        "descripcion": "Copia archivos o directorios.",
+        "info": "Copia archivos/directorios. Ejemplo: cp origen destino. Flags: -r (recursivo), -v (verbose), -i (pregunta antes de sobrescribir)."
+    },
+    {
+        "comando": "cut",
+        "descripcion": "Extrae secciones de cada línea de un archivo o entrada estándar.",
+        "info": "Extrae columnas o campos. Ejemplo: cut -d: -f1 /etc/passwd. Flags: -d (delimitador), -f (campo)."
+    },
+    {
+        "comando": "date",
+        "descripcion": "Muestra o establece la fecha y hora del sistema.",
+        "info": "Muestra o cambia la fecha/hora. Ejemplo: date '+%Y-%m-%d'. Flags: -u (UTC), -s (establece fecha)."
+    },
+    {
+        "comando": "df",
+        "descripcion": "Muestra el uso del espacio en disco de los sistemas de archivos.",
+        "info": "Muestra espacio libre y usado. Ejemplo: df -h. Flags: -h (legible), -T (tipo de sistema de archivos)."
+    },
+    {
+        "comando": "dig",
+        "descripcion": "Herramienta para consultas DNS.",
+        "info": "Consulta registros DNS. Ejemplo: dig google.com. Flags: +short (salida corta), @servidor (servidor DNS específico)."
+    },
+    {
+        "comando": "dmesg",
+        "descripcion": "Muestra mensajes del buffer del kernel, útil para diagnóstico.",
+        "info": "Muestra mensajes del kernel. Ejemplo: dmesg | tail. Flags: -T (marca de tiempo legible), -C (limpia buffer)."
+    },
+    {
+        "comando": "dpkg",
+        "descripcion": "Gestor de paquetes bajo nivel para sistemas Debian.",
+        "info": "Instala, elimina y consulta paquetes .deb. Ejemplo: dpkg -i paquete.deb. Flags: -l (lista), -r (elimina), -i (instala)."
+    },
+    {
+        "comando": "du",
+        "descripcion": "Muestra el uso de espacio en disco de archivos y directorios.",
+        "info": "Calcula tamaño de carpetas/archivos. Ejemplo: du -sh *. Flags: -h (legible), -s (resumen), -a (todos los archivos)."
+    },
+    {
+        "comando": "fdisk",
+        "descripcion": "Herramienta para manipular tablas de particiones.",
+        "info": "Gestiona particiones en discos. Ejemplo: fdisk /dev/sda. Flags: -l (lista particiones)."
+    },
+    {
+        "comando": "find",
+        "descripcion": "Busca archivos y directorios en una jerarquía de directorios.",
+        "info": "Busca archivos por nombre, tipo, fecha, etc. Ejemplo: find . -name '*.txt'. Flags: -type, -mtime, -exec."
+    },
+    {
+        "comando": "findfs",
+        "descripcion": "Busca un sistema de archivos por etiqueta o UUID.",
+        "info": "Localiza sistemas de archivos por etiqueta o UUID. Ejemplo: findfs UUID=xxxx."
+    },
+    {
+        "comando": "free",
+        "descripcion": "Muestra información sobre el uso de memoria del sistema.",
+        "info": "Muestra memoria libre y usada. Ejemplo: free -h. Flags: -h (legible), -m (MB), -g (GB)."
+    },
+    {
+        "comando": "getent",
+        "descripcion": "Consulta bases de datos del sistema como passwd, group, hosts, etc.",
+        "info": "Consulta información de bases de datos del sistema. Ejemplo: getent passwd usuario."
+    },
+    {
+        "comando": "getfacl",
+        "descripcion": "Muestra las listas de control de acceso (ACL) de archivos.",
+        "info": "Muestra ACL de archivos/directorios. Ejemplo: getfacl archivo."
+    },
+    {
+        "comando": "grep",
+        "descripcion": "Busca patrones en texto usando expresiones regulares.",
+        "info": "Filtra líneas que coinciden con un patrón. Ejemplo: grep -rin 'texto' . Flags: -i (ignora mayúsculas), -r (recursivo), -n (número de línea)."
+    },
+    {
+        "comando": "groups",
+        "descripcion": "Muestra los grupos a los que pertenece un usuario.",
+        "info": "Lista los grupos de un usuario. Ejemplo: groups usuario."
+    },
+    {
+        "comando": "head",
+        "descripcion": "Muestra las primeras líneas de un archivo.",
+        "info": "Muestra las primeras líneas. Ejemplo: head -n 10 archivo.txt. Flags: -n (número de líneas)."
+    },
+    {
+        "comando": "history",
+        "descripcion": "Muestra el historial de comandos ejecutados.",
+        "info": "Lista el historial de comandos del shell. Ejemplo: history | grep ls."
+    },
+    {
+        "comando": "id",
+        "descripcion": "Muestra el UID, GID y grupos de un usuario.",
+        "info": "Muestra información de usuario. Ejemplo: id usuario."
+    },
+    {
+        "comando": "iostat",
+        "descripcion": "Muestra estadísticas de CPU y dispositivos de entrada/salida.",
+        "info": "Muestra estadísticas de uso de CPU y discos. Ejemplo: iostat -x 1. Flags: -x (extendido), -d (solo discos)."
+    },
+    {
+        "comando": "ip",
+        "descripcion": "Herramienta para gestionar interfaces y rutas de red.",
+        "info": "Gestiona interfaces, rutas y más. Ejemplo: ip addr, ip route. Flags: link, addr, route."
+    },
+    {
+        "comando": "join",
+        "descripcion": "Une líneas de dos archivos según un campo común.",
+        "info": "Combina archivos por campo común. Ejemplo: join archivo1 archivo2. Flags: -1, -2 (campo de unión), -t (delimitador)."
+    },
+    {
+        "comando": "kill",
+        "descripcion": "Envía señales a procesos, normalmente para terminarlos.",
+        "info": "Finaliza procesos por PID. Ejemplo: kill -9 1234 (SIGKILL)."
+    },
+    {
+        "comando": "killall",
+        "descripcion": "Envía señales a todos los procesos que coincidan con un nombre.",
+        "info": "Finaliza procesos por nombre. Ejemplo: killall firefox. Flags: -9 (SIGKILL), -u (usuario)."
+    },
+    {
+        "comando": "ln",
+        "descripcion": "Crea enlaces físicos o simbólicos a archivos.",
+        "info": "Crea enlaces duros o simbólicos. Ejemplo: ln -s origen enlace. Flags: -s (simbólico), -f (forzar)."
+    },
+    {
+        "comando": "ls",
+        "descripcion": "Lista archivos y directorios del directorio actual.",
+        "info": "Muestra el contenido de un directorio. Ejemplo: ls -lah. Flags: -l (listado largo), -a (ocultos), -h (legible)."
+    },
+    {
+        "comando": "lsblk",
+        "descripcion": "Muestra información sobre dispositivos de bloques.",
+        "info": "Lista dispositivos de bloques. Ejemplo: lsblk -f. Flags: -f (info de sistema de archivos), -o (columnas)."
+    },
+    {
+        "comando": "lsof",
+        "descripcion": "Lista archivos abiertos y los procesos que los usan.",
+        "info": "Muestra archivos abiertos por procesos. Ejemplo: lsof -i :80. Flags: -i (puerto), -u (usuario)."
+    },
+    {
+        "comando": "mkdir",
+        "descripcion": "Crea nuevos directorios.",
+        "info": "Crea uno o varios directorios. Ejemplo: mkdir -p ruta/completa. Flags: -p (jerarquía)."
+    },
+    {
+        "comando": "mount",
+        "descripcion": "Monta un sistema de archivos.",
+        "info": "Monta dispositivos en el sistema de archivos. Ejemplo: mount /dev/sda1 /mnt. Flags: -t (tipo), -o (opciones)."
+    },
+    {
+        "comando": "mpstat",
+        "descripcion": "Muestra estadísticas de CPU.",
+        "info": "Estadísticas de uso de CPU. Ejemplo: mpstat 1. Flags: -P (por CPU), -u (uso de CPU)."
+    },
+    {
+        "comando": "mv",
+        "descripcion": "Mueve o renombra archivos y directorios.",
+        "info": "Mueve o renombra archivos. Ejemplo: mv archivo.txt /tmp/. Flags: -i (pregunta), -v (verbose), -f (forzar)."
+    },
+    {
+        "comando": "netstat",
+        "descripcion": "Muestra conexiones de red, tablas de enrutamiento y estadísticas.",
+        "info": "Muestra conexiones y puertos. Ejemplo: netstat -tuln. Flags: -t (TCP), -u (UDP), -l (escuchando), -n (numérico)."
+    },
+    {
+        "comando": "nice",
+        "descripcion": "Ejecuta un comando con una prioridad modificada.",
+        "info": "Ejecuta con prioridad ajustada. Ejemplo: nice -n 10 comando."
+    },
+    {
+        "comando": "passwd",
+        "descripcion": "Cambia la contraseña de usuario.",
+        "info": "Cambia la contraseña propia o de otro usuario. Ejemplo: passwd usuario."
+    },
+    {
+        "comando": "pgrep",
+        "descripcion": "Busca procesos por nombre y otros atributos.",
+        "info": "Busca procesos por nombre. Ejemplo: pgrep sshd. Flags: -u (usuario), -l (muestra nombre)."
+    },
+    {
+        "comando": "ping",
+        "descripcion": "Comprueba la conectividad de red enviando paquetes ICMP.",
+        "info": "Verifica si un host responde. Ejemplo: ping -c 4 google.com. Flags: -c (cantidad de paquetes)."
+    },
+    {
+        "comando": "pipelines",
+        "descripcion": "Permite encadenar comandos usando el operador '|'.",
+        "info": "Permite pasar la salida de un comando como entrada de otro. Ejemplo: ls | grep txt."
+    },
+    {
+        "comando": "pkill",
+        "descripcion": "Envía señales a procesos por nombre.",
+        "info": "Finaliza procesos por nombre. Ejemplo: pkill firefox. Flags: -9 (SIGKILL), -u (usuario)."
+    },
+    {
+        "comando": "ps",
+        "descripcion": "Muestra información sobre procesos en ejecución.",
+        "info": "Lista procesos activos. Ejemplo: ps -ef. Flags: -e (todos), -f (formato completo), -u (usuario)."
+    },
+    {
+        "comando": "pwd",
+        "descripcion": "Muestra la ruta del directorio de trabajo actual.",
+        "info": "Muestra el directorio actual. Ejemplo: pwd."
+    },
+    {
+        "comando": "renice",
+        "descripcion": "Cambia la prioridad de procesos en ejecución.",
+        "info": "Modifica la prioridad de procesos. Ejemplo: renice -n 10 -p 1234."
+    },
+    {
+        "comando": "resize2fs",
+        "descripcion": "Redimensiona sistemas de archivos ext2/ext3/ext4.",
+        "info": "Cambia el tamaño de sistemas de archivos. Ejemplo: resize2fs /dev/sda1."
+    },
+    {
+        "comando": "rm",
+        "descripcion": "Elimina archivos o directorios.",
+        "info": "Elimina archivos o carpetas. Ejemplo: rm -rf carpeta/. Flags: -r (recursivo), -f (forzar)."
+    },
+    {
+        "comando": "rmdir",
+        "descripcion": "Elimina directorios vacíos.",
+        "info": "Elimina directorios vacíos. Ejemplo: rmdir carpeta."
+    },
+    {
+        "comando": "rsync",
+        "descripcion": "Sincroniza archivos y directorios local o remotamente.",
+        "info": "Sincroniza archivos entre sistemas. Ejemplo: rsync -avz origen destino. Flags: -a (archivos), -v (verbose), -z (comprime)."
+    },
+    {
+        "comando": "sar",
+        "descripcion": "Recoge, informa y guarda información sobre la actividad del sistema.",
+        "info": "Muestra estadísticas de rendimiento. Ejemplo: sar -u 1 3. Flags: -u (CPU), -r (memoria)."
+    },
+    {
+        "comando": "scp",
+        "descripcion": "Copia archivos entre hosts de forma segura.",
+        "info": "Copia archivos por SSH. Ejemplo: scp archivo usuario@host:/ruta/. Flags: -r (recursivo), -P (puerto)."
+    },
+    {
+        "comando": "sed",
+        "descripcion": "Editor de texto no interactivo para filtrar y transformar texto.",
+        "info": "Edita texto en flujo. Ejemplo: sed 's/viejo/nuevo/g' archivo.txt. Flags: -i (in-place), -e (expresión)."
+    },
+    {
+        "comando": "setfacl",
+        "descripcion": "Establece listas de control de acceso (ACL) en archivos.",
+        "info": "Modifica ACL de archivos/directorios. Ejemplo: setfacl -m u:usuario:rwx archivo."
+    },
+    {
+        "comando": "sftp",
+        "descripcion": "Transfiere archivos de forma segura sobre SSH.",
+        "info": "Transfiere archivos por SSH. Ejemplo: sftp usuario@host."
+    },
+    {
+        "comando": "sort",
+        "descripcion": "Ordena líneas de texto.",
+        "info": "Ordena líneas de archivos/texto. Ejemplo: sort archivo.txt. Flags: -r (reversa), -n (numérico), -u (únicos)."
+    },
+    {
+        "comando": "ss",
+        "descripcion": "Muestra información sobre sockets y conexiones de red.",
+        "info": "Muestra sockets y conexiones. Ejemplo: ss -tuln. Flags: -t (TCP), -u (UDP), -l (escuchando), -n (numérico)."
+    },
+    {
+        "comando": "ssh",
+        "descripcion": "Acceso remoto seguro a otros sistemas.",
+        "info": "Conecta a máquinas remotas. Ejemplo: ssh usuario@host. Flags: -p (puerto), -i (clave privada)."
+    },
+    {
+        "comando": "sudo",
+        "descripcion": "Permite ejecutar comandos como otro usuario, normalmente root.",
+        "info": "Ejecuta comandos con privilegios elevados. Ejemplo: sudo apt update."
+    },
+    {
+        "comando": "sysctl",
+        "descripcion": "Muestra o modifica parámetros del kernel en tiempo real.",
+        "info": "Consulta o cambia parámetros del kernel. Ejemplo: sysctl -a. Flags: -w (escribe valor)."
+    },
+    {
+        "comando": "tail",
+        "descripcion": "Muestra las últimas líneas de un archivo.",
+        "info": "Muestra las últimas líneas. Ejemplo: tail -n 20 archivo.txt. Flags: -n (número de líneas), -f (seguimiento en tiempo real)."
+    },
+    {
+        "comando": "tar",
+        "descripcion": "Archiva y descomprime archivos.",
+        "info": "Crea o extrae archivos comprimidos. Ejemplo: tar -czvf archivo.tar.gz carpeta/. Flags: -c (crear), -x (extraer), -v (verbose), -f (archivo), -z (gzip)."
+    },
+    {
+        "comando": "touch",
+        "descripcion": "Crea archivos vacíos o actualiza su fecha de modificación.",
+        "info": "Crea archivos vacíos o actualiza fecha. Ejemplo: touch archivo.txt."
+    },
+    {
+        "comando": "tr",
+        "descripcion": "Traduce o elimina caracteres de la entrada.",
+        "info": "Traduce o elimina caracteres. Ejemplo: tr 'a-z' 'A-Z'. Flags: -d (elimina), -s (sustituye repetidos)."
+    },
+    {
+        "comando": "traceroute",
+        "descripcion": "Muestra la ruta que siguen los paquetes hasta un host.",
+        "info": "Muestra saltos de red hasta un destino. Ejemplo: traceroute google.com."
+    },
+    {
+        "comando": "tune2fs",
+        "descripcion": "Ajusta parámetros de sistemas de archivos ext2/ext3/ext4.",
+        "info": "Modifica parámetros de sistemas de archivos. Ejemplo: tune2fs -l /dev/sda1."
+    },
+    {
+        "comando": "umask",
+        "descripcion": "Establece permisos predeterminados para nuevos archivos.",
+        "info": "Configura permisos por defecto. Ejemplo: umask 022."
+    },
+    {
+        "comando": "uname",
+        "descripcion": "Muestra información sobre el sistema.",
+        "info": "Muestra información del sistema. Ejemplo: uname -a. Flags: -a (todo), -r (release), -s (kernel)."
+    },
+    {
+        "comando": "uniq",
+        "descripcion": "Elimina líneas duplicadas adyacentes en archivos de texto.",
+        "info": "Elimina duplicados adyacentes. Ejemplo: sort archivo.txt | uniq. Flags: -c (cuenta), -d (solo duplicados)."
+    },
+    {
+        "comando": "unlink",
+        "descripcion": "Elimina un solo archivo.",
+        "info": "Elimina un archivo. Ejemplo: unlink archivo.txt."
+    },
+    {
+        "comando": "useradd",
+        "descripcion": "Crea un nuevo usuario.",
+        "info": "Crea cuentas de usuario. Ejemplo: useradd usuario. Flags: -m (crea home), -s (shell)."
+    },
+    {
+        "comando": "userdel",
+        "descripcion": "Elimina un usuario.",
+        "info": "Elimina cuentas de usuario. Ejemplo: userdel usuario. Flags: -r (elimina home)."
+    },
+    {
+        "comando": "usermod",
+        "descripcion": "Modifica una cuenta de usuario.",
+        "info": "Modifica cuentas de usuario. Ejemplo: usermod -aG grupo usuario. Flags: -aG (añade a grupo), -s (shell)."
+    },
+    {
+        "comando": "vmstat",
+        "descripcion": "Muestra estadísticas de memoria virtual, procesos y CPU.",
+        "info": "Estadísticas de memoria, procesos y CPU. Ejemplo: vmstat 1."
+    },
+    {
+        "comando": "wc",
+        "descripcion": "Cuenta líneas, palabras y caracteres en archivos.",
+        "info": "Cuenta líneas, palabras y caracteres. Ejemplo: wc -l archivo.txt. Flags: -l (líneas), -w (palabras), -c (caracteres)."
+    },
+    {
+        "comando": "xargs",
+        "descripcion": "Construye y ejecuta comandos desde la entrada estándar.",
+        "info": "Ejecuta comandos usando la entrada estándar. Ejemplo: find . -name '*.txt' | xargs rm. Flags: -n (número de argumentos), -I (reemplazo)."
+    },
+    {
+        "comando": "yes",
+        "descripcion": "Imprime una cadena repetidamente, útil para pruebas.",
+        "info": "Imprime una cadena repetidamente. Ejemplo: yes 'Hola Mundo'. Flags: -n (número de repeticiones)."
+    },
+    {
+        "comando": "zip",
+        "descripcion": "Comprime archivos en un archivo ZIP.",
+        "info": "Crea archivos ZIP. Ejemplo: zip archivo.zip archivo1 archivo2. Flags: -r (recursivo), -9 (máxima compresión)."
+    },
+    {
+        "comando": "unzip",
+        "descripcion": "Descomprime archivos ZIP.",
+        "info": "Extrae archivos de un ZIP. Ejemplo: unzip archivo.zip. Flags: -l (lista), -o (sobrescribe sin preguntar)."
+    }
+]
